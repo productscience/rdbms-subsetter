@@ -226,7 +226,7 @@ class Db(object):
         print("\n".join(sorted(message)))
         if self.args.yes:
             return True
-        response = input("Proceed? (Y/n) ").strip().lower()
+        response = raw_input("Proceed? (Y/n) ").strip().lower()
         return (not response) or (response[0] == 'y')
 
 
